@@ -278,6 +278,7 @@ const questions = [
 function App() {
   const [answers, setAnswers] = useState({});
   const [results, setResults] = useState(null);
+  const [dominantDosha, setDominantDosha] = useState(null);
 
   const handleAnswer = (questionId, dosha) => {
     setAnswers({ ...answers, [questionId]: dosha });
@@ -305,9 +306,26 @@ function App() {
     });
 
     setResults(results);
+
+    // Determine the dominant dosha
+    const dominant = results.reduce((max, dosha) => dosha.value > max.value ? dosha : max);
+    setDominantDosha(dominant.name);
   };
 
   const COLORS = ['#FFBB28', '#00C49F', '#0088FE'];
+
+  const getDietChartLink = () => {
+    switch (dominantDosha) {
+      case 'Vata':
+        return 'https://drive.google.com/file/d/1cP7csM5mGKZ0LsxYuDSO9trED1h8IP0L/view?usp=sharing';
+      case 'Pitta':
+        return 'https://drive.google.com/file/d/1cT3CljEaXDI0WG7cAV0htVyiYbk1KrTe/view?usp=sharing';
+      case 'Kapha':
+        return 'https://drive.google.com/file/d/1cPMfB8eUEm0X9t5NEzMi1xdNNTljTRdJ/view?usp=sharing';
+      default:
+        return '';
+    }
+  };
 
   return (
     <div style={{ maxWidth: '600px', margin: '0 auto', padding: '20px', fontFamily: 'Arial, sans-serif' }}>
@@ -372,6 +390,28 @@ function App() {
               <Legend />
             </PieChart>
           </ResponsiveContainer>
+          {dominantDosha && (
+            <div style={{ marginTop: '20px', textAlign: 'center' }}>
+              <h3>Your Dominant Dosha: {dominantDosha}</h3>
+              <a
+                href={getDietChartLink()}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-block',
+                  padding: '10px 20px',
+                  backgroundColor: '#3498db',
+                  color: 'white',
+                  textDecoration: 'none',
+                  borderRadius: '5px',
+                  fontSize: '16px',
+                  marginTop: '10px'
+                }}
+              >
+                View Diet Chart for {dominantDosha}
+              </a>
+            </div>
+          )}
         </div>
       )}
     </div>
