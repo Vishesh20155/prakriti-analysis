@@ -16,7 +16,7 @@ const questions = [
     text: "Type of Hair",
     options: [
       { dosha: "Vata", description: "Dry and with Splits End" },
-      { dosha: "Pitta", description: "Normal,Thin,More Hair Fall" },
+      { dosha: "Pitta", description: "Normal, Thin, More Hair Fall" },
       { dosha: "Kapha", description: "Greasy, Heavy" }
     ]
   },
@@ -37,8 +37,243 @@ const questions = [
       { dosha: "Pitta", description: "Soft, More Sweating, Acne" },
       { dosha: "Kapha", description: "Moist, Greasy" }
     ]
+  },
+  {
+    id: 5,
+    text: "Complexion",
+    options: [
+      { dosha: "Vata", description: "Dark, Blackish" },
+      { dosha: "Pitta", description: "Pink to Red" },
+      { dosha: "Kapha", description: "Glowing, White" }
+    ]
+  },
+  {
+    id: 6,
+    text: "Body Weight",
+    options: [
+      { dosha: "Vata", description: "Low, Difficult to Put on Weight" },
+      { dosha: "Pitta", description: "Medium, Can Easily Lose or Gain Weight" },
+      { dosha: "Kapha", description: "Overweight, Difficult to Lose Weight" }
+    ]
+  },
+  {
+    id: 7,
+    text: "Nails",
+    options: [
+      { dosha: "Vata", description: "Blackish, Small, Brittle" },
+      { dosha: "Pitta", description: "Reddish, Small" },
+      { dosha: "Kapha", description: "Pinkish, Big, Smooth" }
+    ]
+  },
+  {
+    id: 8,
+    text: "Size and Color of the Teeth",
+    options: [
+      { dosha: "Vata", description: "Very Big or Very Small, Irregular (Blackish)" },
+      { dosha: "Pitta", description: "Medium Sized, Yellowish" },
+      { dosha: "Kapha", description: "Large, Shining White" }
+    ]
+  },
+  {
+    id: 9,
+    text: "Pace of Performing Work",
+    options: [
+      { dosha: "Vata", description: "Fast, Always in Hurry" },
+      { dosha: "Pitta", description: "Medium, Energetic" },
+      { dosha: "Kapha", description: "Slow, Steady" }
+    ]
+  },
+  {
+    id: 10,
+    text: "Mental Activity",
+    options: [
+      { dosha: "Vata", description: "Quick, Restless" },
+      { dosha: "Pitta", description: "Smart-Intellectual, Aggressive" },
+      { dosha: "Kapha", description: "Calm, Steady" }
+    ]
+  },
+  {
+    id: 11,
+    text: "Memory",
+    options: [
+      { dosha: "Vata", description: "Short Term Recall" },
+      { dosha: "Pitta", description: "Good Memory" },
+      { dosha: "Kapha", description: "Long Term Best" }
+    ]
+  },
+  {
+    id: 12,
+    text: "Grasping Power",
+    options: [
+      { dosha: "Vata", description: "Grasps Quickly but not Completely and Forgets Quickly" },
+      { dosha: "Pitta", description: "Grasps Quickly but Completely and Has Good Memory" },
+      { dosha: "Kapha", description: "Grasps Late but Retains for Longer Time" }
+    ]
+  },
+  {
+    id: 13,
+    text: "Sleep Pattern",
+    options: [
+      { dosha: "Vata", description: "Interrupted, Less" },
+      { dosha: "Pitta", description: "Moderate" },
+      { dosha: "Kapha", description: "Heavy Sleepy" }
+    ]
+  },
+  {
+    id: 14,
+    text: "Tolerance to Weather Conditions",
+    options: [
+      { dosha: "Vata", description: "Aversion to Cold" },
+      { dosha: "Pitta", description: "Aversion to Heat" },
+      { dosha: "Kapha", description: "Aversion to Moist, Rainy and Cold Weather" }
+    ]
+  },
+  {
+    id: 15,
+    text: "Reactions Under Adverse Situations",
+    options: [
+      { dosha: "Vata", description: "Anxiety, Worry, Irritability" },
+      { dosha: "Pitta", description: "Anger, Aggression" },
+      { dosha: "Kapha", description: "Calm, Reclusive, Sometimes Depressive" }
+    ]
+  },
+  {
+    id: 16,
+    text: "Mood",
+    options: [
+      { dosha: "Vata", description: "Changes Quickly, Frequent Mood Swings" },
+      { dosha: "Pitta", description: "Changes Slowly" },
+      { dosha: "Kapha", description: "Stable, Consistent" }
+    ]
+  },
+  {
+    id: 17,
+    text: "Eating Habit",
+    options: [
+      { dosha: "Vata", description: "Eats Quickly Without Chewing Properly" },
+      { dosha: "Pitta", description: "Eats at Moderate Speed" },
+      { dosha: "Kapha", description: "Chews Food Properly" }
+    ]
+  },
+  {
+    id: 18,
+    text: "Hunger",
+    options: [
+      { dosha: "Vata", description: "Irregular, Any Time" },
+      { dosha: "Pitta", description: "Sudden Hunger Pangs, Sharp Hunger" },
+      { dosha: "Kapha", description: "Can Skip Any Meal Easily" }
+    ]
+  },
+  {
+    id: 19,
+    text: "Body Temperature",
+    options: [
+      { dosha: "Vata", description: "Less than Normal, Hands and Feet are Cold" },
+      { dosha: "Pitta", description: "More than Normal, Face and Forehead Hot" },
+      { dosha: "Kapha", description: "Normal, Hands and Feet Slightly Cold" }
+    ]
+  },
+  {
+    id: 20,
+    text: "Joints",
+    options: [
+      { dosha: "Vata", description: "Weak, Noise on Movement" },
+      { dosha: "Pitta", description: "Healthy with Optimal Strength" },
+      { dosha: "Kapha", description: "Heavy, Weight Bearing" }
+    ]
+  },
+  {
+    id: 21,
+    text: "Nature",
+    options: [
+      { dosha: "Vata", description: "Worried, Jealous" },
+      { dosha: "Pitta", description: "Anger, Fearless" },
+      { dosha: "Kapha", description: "Forgiving, Cheerful, Not Greedy" }
+    ]
+  },
+  {
+    id: 22,
+    text: "Body Energy",
+    options: [
+      { dosha: "Vata", description: "Becomes Low in Evening, Fatigues after Less Work" },
+      { dosha: "Pitta", description: "Moderate, Gets Tired after Medium Work" },
+      { dosha: "Kapha", description: "Excellent Energy Throughout Day, Not Easily Fatigued" }
+    ]
+  },
+  {
+    id: 23,
+    text: "Eyeball",
+    options: [
+      { dosha: "Vata", description: "Unsteady, Fast Moving" },
+      { dosha: "Pitta", description: "Moving Slowly" },
+      { dosha: "Kapha", description: "Steady" }
+    ]
+  },
+  {
+    id: 24,
+    text: "Quality of Voice",
+    options: [
+      { dosha: "Vata", description: "Rough with Broken Words" },
+      { dosha: "Pitta", description: "Fast, Commanding" },
+      { dosha: "Kapha", description: "Soft and Deep" }
+    ]
+  },
+  {
+    id: 25,
+    text: "Dreams",
+    options: [
+      { dosha: "Vata", description: "Sky, Wind, Flying Objects, Confusion" },
+      { dosha: "Pitta", description: "Fire, Light, Bright Colors, Violence" },
+      { dosha: "Kapha", description: "Water Bodies, Gardens, Good Relationships" }
+    ]
+  },
+  {
+    id: 26,
+    text: "Social Relations",
+    options: [
+      { dosha: "Vata", description: "Most Likely Prefers Solitude" },
+      { dosha: "Pitta", description: "Good No. of Friends" },
+      { dosha: "Kapha", description: "Loves to Socialize, Relationships are Longer Lasting" }
+    ]
+  },
+  {
+    id: 27,
+    text: "Wealth",
+    options: [
+      { dosha: "Vata", description: "Spends without Thinking Much" },
+      { dosha: "Pitta", description: "Saves but Spends on Valuable Things" },
+      { dosha: "Kapha", description: "Prefers More Savings" }
+    ]
+  },
+  {
+    id: 28,
+    text: "Bowel Movements",
+    options: [
+      { dosha: "Vata", description: "Dry, Hard, Blackish, Scanty Stools" },
+      { dosha: "Pitta", description: "Soft, Yellowish, Loose Stools" },
+      { dosha: "Kapha", description: "Heavy, Thick, Sticky Stools" }
+    ]
+  },
+  {
+    id: 29,
+    text: "Walking Pace",
+    options: [
+      { dosha: "Vata", description: "Quick, Fast With Long Steps" },
+      { dosha: "Pitta", description: "Always Steady" },
+      { dosha: "Kapha", description: "Slow with Short Steps" }
+    ]
+  },
+  {
+    id: 30,
+    text: "Communication Skills",
+    options: [
+      { dosha: "Vata", description: "Fast, Irrelevant Talk, Speech not Clear" },
+      { dosha: "Pitta", description: "Good Speaker with Definite Argumentative Skills" },
+      { dosha: "Kapha", description: "Authoritative, Few Words, Little Speech" }
+    ]
   }
 ];
+
 
 function App() {
   const [answers, setAnswers] = useState({});
