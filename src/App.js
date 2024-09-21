@@ -290,11 +290,19 @@ function App() {
       return acc;
     }, {});
 
-    const totalQuestions = questions.length;
+    const answeredQuestions = Object.keys(answers).length;
     const results = Object.entries(doshaCount).map(([dosha, count]) => ({
       name: dosha,
-      value: (count / totalQuestions) * 100
+      value: (count / answeredQuestions) * 100
     }));
+
+    // Add doshas with 0% if they weren't selected in any answer
+    const allDoshas = ['Vata', 'Pitta', 'Kapha'];
+    allDoshas.forEach(dosha => {
+      if (!results.some(result => result.name === dosha)) {
+        results.push({ name: dosha, value: 0 });
+      }
+    });
 
     setResults(results);
   };
@@ -342,6 +350,9 @@ function App() {
       {results && (
         <div style={{ marginTop: '30px' }}>
           <h2 style={{ textAlign: 'center', color: '#333' }}>Your Prakriti Analysis Results</h2>
+          <p style={{ textAlign: 'center', color: '#666' }}>
+            Based on {Object.keys(answers).length} answered questions out of {questions.length} total questions.
+          </p>
           <ResponsiveContainer width="100%" height={300}>
             <PieChart>
               <Pie
@@ -352,7 +363,7 @@ function App() {
                 outerRadius={80}
                 fill="#8884d8"
                 dataKey="value"
-                label={({ name, percent }) => `${name} ${percent.toFixed(0)}%`}
+                label={({ name, value }) => `${name} ${value.toFixed(1)}%`}
               >
                 {results.map((entry, index) => (
                   <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
