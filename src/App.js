@@ -28,6 +28,15 @@ const questions = [
       { dosha: "Pitta", description: "Red or Brown" },
       { dosha: "Kapha", description: "Jet Black" }
     ]
+  },
+  {
+    id: 4,
+    text: "Skin",
+    options: [
+      { dosha: "Vata", description: "Dry, Rough" },
+      { dosha: "Pitta", description: "Soft, More Sweating, Acne" },
+      { dosha: "Kapha", description: "Moist, Greasy" }
+    ]
   }
 ];
 
